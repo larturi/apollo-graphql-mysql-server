@@ -1,0 +1,21 @@
+type Persona {
+   id: Int!
+   nombre: String!
+   apellido: String!
+   active: Boolean!
+}
+
+input PersonaInput {
+   nombre: String!
+   apellido: String!
+   active: Boolean!
+}
+
+type Query {
+   getPersonas: [Persona]
+   getPersona(id: Int!): Persona
+}
+
+type Mutation {
+   createPersona(input: PersonaInput): Persona!
+}

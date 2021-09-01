@@ -1,0 +1,19 @@
+type Lenguaje {
+   id: Int!
+   nombre: String!
+   active: Boolean!
+}
+
+input LenguajeInput {
+   nombre: String!
+   active: Boolean!
+}
+
+type Query {
+   getLenguajes: [Lenguaje]
+   getLenguaje(id: Int!): Lenguaje
+}
+
+type Mutation {
+   createLenguaje(input: LenguajeInput): Lenguaje!
+}

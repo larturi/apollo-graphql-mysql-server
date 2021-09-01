@@ -1,0 +1,19 @@
+type Pais {
+   id: Int!
+   nombre: String!
+   active: Boolean!
+}
+
+input PaisInput {
+   nombre: String!
+   active: Boolean!
+}
+
+type Query {
+   getPaises: [Pais]
+   getPais(id: Int!): Pais
+}
+
+type Mutation {
+   createPais(input: PaisInput): Pais!
+}
